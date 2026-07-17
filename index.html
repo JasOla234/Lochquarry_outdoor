@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lochquarry outdoor centre</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script> <!--to add confetti-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"> <!--To add hover effect to the are you ready button-->
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script> <!--javascript to tilt gallery-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!--for the typed part of the welcome to lochquarry-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.js"></script>
+    </head>
+        <body>
+            <!--Nav bar start-->
+            <nav>
+                <ul style="list-style-type:none;">
+                    <li><a href="Aboutus.html">About us</a></li>
+                    <li><a href="FindyourActivity.html">Find your activity</a></li>
+                    <li><a href= "Reviews.html">Reviews</a> </li>
+                </ul>
+            </nav>
+        <!--This is the start of the hero section-->
+            <header class="hero">  
+                <div>
+                    <img id="Banner" src="Lochquarry_Banner/Lochquarry_banner.jpg" height="20" alt="A young person rope climbing on a mountain">
+                </div>
+           </header>
+          <!--The Welcome to lochquarry section-->         
+        <section class="first">
+            <div class="welcome">
+                <h1 id="confetti">Welcome to <span id="typedText">Lochquarry</span></h1>
+                
+            </div>
+           <!--The Explore section-->   
+            <div class="explore">
+                <p>The ultimate outdoor playground where adventure meets the wild. Spread across our spectacular natural landscape, our purpose-built activity zones are designed to challenge your limits, test your skills, and immerse you in nature.</p>
+            </div>
+        </section>
+
+            <div class="adventure">Explore our three dedicated adventure zones:</div>
+
+        <section class="zonetype">
+            <div>
+                <a href="Findyouractivity.html" class="activity">The Loch & Waterfront</a>
+    
+                <p>
+                    Dive into action on our expansive, pristine waters. Whether you're looking for a peaceful, rhythmic paddle along the shoreline or a high-speed, adrenaline-pumping wake, our water arena offers the perfect escape for every pace. Water based activities in the zone includes; Kayaking, Canoeing and Powerboating.
+
+                </p>
+            
+                <img class="gallery-image" src="lochquarry_photographs/nature/nature_2.jpg" height="1000" alt="picture of site castle"> 
+        
+            </div>
+            <div>
+                <a href="findyouractivity.html" class="activity"> Mountain Zone & Crags</a>
+    
+                <p>
+                    Reach new heights on our towering climbing faces and high-altitude elements. Engineered for both beginners and seasoned adrenaline-seekers, this zone is where you test your grip, find your balance, and enjoy the best views on the estate. Rope based activities in the zone includes; Climbing, Abseiling, Pole climbing.
+
+                </p>
+        
+                <img class="gallery-image" src="lochquarry_photographs/nature/nature_3.jpg" height="1000" alt="picture of highland cow on mountain">
+       
+            </div>
+
+            <div>
+                <a href="findyouractivity.html" class="activity">The Woodlands & Ranges</a>
+   
+                <p>
+                        Step into the shelter of the trees to hone your focus and precision. Our dedicated, safe range and forest areas are designed for those who want to slow things down, find their mark, and master ancient skills of accuracy. Land based activities in this zone includes; Hillwalking, Archery, Orienteering, Axe throwing.
+                </p>
+        
+                <img class="gallery-image" src="lochquarry_photographs/nature/nature_1.jpg" height="1000" alt="picture of tall trees">
+        
+            </div>
+            <div class="discount">
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                             <h2 data-atropos-offset="-5">New in : 15% off for school groups</h2>
+                            </div>
+                        </div> 
+                                
+                    </div>
+                </div>
+            </div>
+</section>
+       
+<section class="go">
+    
+        <h3>From family day trips and corporate team-building to unforgettable solo challenges, Lochquarry is mapped out for your next great memory. </h3>
+         <!--Javascript for hover button-->
+            
+       
+        <article class="button-link hvr-grow" button id="hoverbutton">
+         <a href="FindyourActivity.html">The landscape is ready. Are you?</a> 
+            
+        </article>
+       
+        
+</section> 
+
+        
+        
+<footer>
+            <!-- Copyright Symbol: press Alt + 0169 -->
+             <p>© Lochinquarry Outdoor Centre. ALL RIGHTS RESERVED</p>
+</footer>
+
+<script>
+ <!-- this launches the confetti when the welcome to lochquaryy is clicked -->
+
+    const confettiButton = document.getElementById("confetti");
+
+    confettiButton.addEventListener("click", function () {
+    confetti({
+    particleCount: 1600,
+    spread: 150,
+    origin: { y: 0.75 }
+    });
+    });
+
+   <!--more script to tilt images on homepage-->   
+    VanillaTilt.init(document.querySelectorAll(".gallery-image"), {
+  max: 2,
+  speed: 50,
+  glare: true,
+  "max-glare": 2.25
+});
+
+  const typed = new Typed("#typedText", {
+  strings: ["Lochquarry", "Adventure", "Fun", "Adrenaline","the Impossible"],
+  typeSpeed: 200,
+  backSpeed: 70,
+  backDelay: 1200,
+  loop: true
+    });
+
+  const myAtropos = Atropos({
+  el: ".my-atropos",
+  activeOffset: 40,
+  shadowScale: 0.5
+});
+        </script>
+    </body>
+
+</html>
