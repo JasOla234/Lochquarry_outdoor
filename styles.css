@@ -6,7 +6,7 @@ header.hero {
     width:100vw;
     place-items: center;
     padding: 5.5rem 5.5rem;
-    background: url("Lochquarry_Banner/Lochquarry_video.gif") center/cover no-repeat;
+    background: url("lochquarry_banner/lochquarry_video.gif") center/cover no-repeat;
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
